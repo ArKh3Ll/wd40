@@ -13,17 +13,20 @@
 
 <body>
   <div class="navbar">
-    <img src="logo.png" alt="LOGO HERE" />
+    <img src="src/logo.png" alt="LOGO HERE" /> <input type="text" class="search-bar" placeholder="Search..." onfocus="openSearchModal()" style="position: inherit;" />
     <div class="nav-links">
       <a href="index.html">Home</a>
       <a href="#">Disclaimer</a>
       <a href="#">About Us</a>
-      <input type="text" class="search-bar" placeholder="Search..." onfocus="openSearchModal()" />
+      
     </div>
   </div>
-
+  <h2 id="banner-title" style="visibility: hidden;"></h2>
   <div class="banner" id="banner">
-    <h1 id="banner-title"></h1>
+   
+    
+    <div><h1 style="border-radius: 15px; font-size: 60px; padding:50px; "> WD40 Movies<br></h1></div>
+    
   </div>
 
   <div class="row">
@@ -42,23 +45,24 @@
   </div>
 
   <div class="modal" id="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeModal()">&times;</span>
-      <h2 id="modal-title"></h2>
-      <div class="stars" id="modal-rating"></div>
-      <p id="modal-description"></p>
-      <img id="modal-image" src="" alt="" />
-      <iframe id="modal-video" width="100%" height="315" frameborder="0" allowfullscreen></iframe>
-      <div class="server-selector">
-        <label for="server">Change Server:</label>
-        <select id="server" onchange="changeServer()">
-          <option value="vidsrc.cc">Vidsrc.cc</option>
-          <option value="vidsrc.me">Vidsrc.me</option>
-          <option value="player.videasy.net">Player.Videasy.net</option>
-        </select>
-      </div>
-    </div>
-  </div>
+     <img id="modal-image" src="" alt="" / style="visibility:hidden;"> 
+     <span class="close" onclick="closeModal()">&times;</span>
+     
+      <div class="vplayer"><iframe id="modal-video" class="modal-video" allowfullscreen></iframe></div>
+      
+        
+       
+       
+       <div class="server-selector">
+         <label for="server">Change Server:</label>
+         <select id="server" onchange="changeServer()">
+           <option value="vidsrc.cc">Vidsrc.cc</option>
+           <option value="vidsrc.me">Vidsrc.me</option>
+           <option value="player.videasy.net">Player.Videasy.net</option>
+         </select>
+       </div>
+     
+   </div>
 
   <div class="search-modal" id="search-modal">
     <span class="close" onclick="closeSearchModal()">&times;</span>
@@ -66,3 +70,8 @@
     <div class="results" id="search-results"></div>
   </div>
 </body>
+
+<div class="movtitle"><h2 id="modal-title"></h2>
+  <div class="stars" id="modal-rating"></div></div>
+
+      <div class="movdisc"><p id="modal-description"></p></div>

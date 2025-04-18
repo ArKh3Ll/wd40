@@ -17,6 +17,9 @@
     .banner {
       height: 50vh;
       background-size: cover;
+      background-position: center;
+      background-color: #131313;
+      background-blend-mode: lighten;
       display: flex;
       align-items: center;
       padding: 20px;
@@ -57,26 +60,41 @@
     .modal {
       position: fixed;
       top: 0; left: 0;
-      width: 100%; height: 95%;
-      background: rgba(0,0,0,0.8);
+
+      width: 100%; 
+      height: 100%;
+      background: #222;
       display: none;
-      justify-content: center;
-      align-items: center;
+
+      
+      
       z-index: 10;
     }
 
     .modal-content {
-      background: #222;
+      background: red;
       padding: 20px;
-      width: 80%;
+     
+
       max-width: 600px;
       text-align: center;
       position: relative;
+  
     }
 
     .modal img {
-      width: 50%;
-      border-radius: 5px;
+      
+     
+      z-index: -1;
+      position: inherit;
+
+
+    }
+    .poster {
+      display: flex;
+      width: 100%;
+      z-index:-2
+
     }
 
     .stars { color: gold; }
@@ -131,3 +149,28 @@
       right: 30px;
       font-size: 30px;
     }
+
+    .movtitle{
+      visibility: hidden;
+      display: flex;
+      z-index: -5;
+
+    }
+    .movdisc{
+      visibility: hidden;
+      display: flex;
+      z-index: -5;
+    }
+    .vplayer{
+      display: flex;
+      width: 100%;
+
+
+    }
+
+    .modal-video{
+      width: 100%;
+      border:0px;
+    }
+
+
